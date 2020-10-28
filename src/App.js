@@ -4,9 +4,10 @@ import "./App.css";
 
 function App() {
   var todoItems = [];
-  todoItems.push({ index: 1, value: "learn react", done: false, edit: false  });
-  todoItems.push({ index: 2, value: "Go shopping", done: true, edit: false});
-  todoItems.push({ index: 3, value: "buy flowers", done: true, edit: false });
+  todoItems.push({ index: 1, value: "Pay credit card bill", done: false, edit: false, deleted: false });
+  todoItems.push({ index: 2, value: "Go shopping", done: false, edit: false, deleted: false});
+  todoItems.push({ index: 3, value: "Buy flowers for wife", done: true, edit: false, deleted: false });
+  todoItems.push({ index: 4, value: "Buy Cake for birthday", done: false, edit: false, deleted: false });
 
   return (
     <div className="App">

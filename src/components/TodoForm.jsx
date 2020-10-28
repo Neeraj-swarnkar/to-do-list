@@ -7,9 +7,7 @@ class TodoForm extends React.Component {
     super(props);
     this.state = { value: "" };
   }
-  componentDidMount() {
-    //this.refs.itemName.focus();
-  }
+  componentDidMount() {}
 
   handleChange = event => {
     this.setState({ value: event.target.value });
@@ -29,12 +27,7 @@ class TodoForm extends React.Component {
 
   onSelectedDelete = event => {
     event.preventDefault();
-    // var newItemValue = this.refs.itemName.value;
-
-    // if (newItemValue) {
     this.props.onSelectedDelete();
-    // this.refs.form.reset();
-    // }
   };
   render() {
     return (
@@ -49,7 +42,12 @@ class TodoForm extends React.Component {
             aria-label="Add a new todo"
           />
           <div className="input-group-append" style={{ marginTop: "10px" }}>
-            <button className="btn btn-light" type="submit" id="button-addon2">
+            <button
+              className="btn btn-light"
+              type="submit"
+              id="button-addon2"
+              aria-pressed="true"
+            >
               Add
             </button>
           </div>
@@ -62,6 +60,7 @@ class TodoForm extends React.Component {
               type="button"
               id="button-remove"
               onClick={this.onSelectedDelete}
+              aria-pressed="false"
             >
               Remove Selected
             </button>

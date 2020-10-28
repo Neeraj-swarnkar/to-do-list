@@ -14,7 +14,9 @@ class TodoApp extends React.Component {
     this.state.todoItems.unshift({
       index: this.state.todoItems.length + 1,
       value: todoItem.newItemValue,
-      done: false
+      done: false,
+      edit: false,
+      deleted: false
     });
     this.setState({ todoItems: this.state.todoItems });
   };
@@ -31,17 +33,12 @@ class TodoApp extends React.Component {
   };
   onSelectedDelete = itemIndex => {
     let deleteListValues = this.state.deleteList;
-    console.log("selectedItem ", deleteListValues);
-    let filterredList = this.state.todoItems.filter(function(value) {
-      let newVal = deleteListValues.map(function(v) {
-        return value.index !== v;
-      });
-      return newVal;
+    let todo = this.state.todoItems;
+    deleteListValues.forEach(function(value, index) {
+      todo.splice(value, 1);
     });
 
-    // output
-    console.log("result ", filterredList);
-    // this.setState({ todoItems: filterredList });
+    this.setState({ todoItems: todo });
   };
   markTodoDone = itemIndex => {
     var todo = this.state.todoItems[itemIndex];

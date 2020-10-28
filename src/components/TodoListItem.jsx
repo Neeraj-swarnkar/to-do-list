@@ -6,7 +6,8 @@ class TodoListItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      editVal: ""
+      editVal: "",
+      isChecked: false
     };
   }
   onClickClose = () => {
@@ -18,10 +19,21 @@ class TodoListItem extends React.Component {
     this.props.markTodoDone(index);
   };
   selectedItem = event => {
+    // const target = event.target;
+    // const value = target.type === "checkbox" ? target.checked : target.value;
+    // const name = target.name;
+
+    // this.setState({
+    //   [name]: value
+    // });
+
     if (event.target.checked) {
       var index = parseInt(this.props.index);
       this.props.deleteList.push(index);
       this.props.selectedItem(this.props.deleteList);
+      // this.setState({
+      //   isChecked: false
+      // });
     }
   };
   _handleDoubleClickItem = event => {
@@ -53,9 +65,11 @@ class TodoListItem extends React.Component {
       >
         <div className={todoClass}>
           <input
+            id={"todo-" + this.props.index}
+            name="isChecked"
             type="checkbox"
             className="form-check-input"
-            onClick={this.selectedItem}
+            onChange={this.selectedItem}
           />
           <span
             style={{ margin: "0px 15px 0px 30px" }}
