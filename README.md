@@ -95,7 +95,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 # 📝 License
 
-MIT - All of the codebases are MIT licensed unless otherwise specified.
+Feel free to contribute.
 
 Developed By Neeraj Swarnkar
 
