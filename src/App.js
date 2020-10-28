@@ -1,24 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import TodoApp from "../src/components/TodoApp";
+import "./App.css";
 
 function App() {
+  var todoItems = [];
+  todoItems.push({ index: 1, value: "learn react", done: false, edit: false  });
+  todoItems.push({ index: 2, value: "Go shopping", done: true, edit: false});
+  todoItems.push({ index: 3, value: "buy flowers", done: true, edit: false });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TodoApp todoItems={todoItems} />
     </div>
   );
 }
