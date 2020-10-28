@@ -1,8 +1,29 @@
 # to-do-list
 
-Single Page HTML5 TODO List
+Single Page HTML5 TODO List (Work In Progress)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+# Screenshots
+
+<img width="745" alt="Screenshot 2020-10-28 at 6 41 52 PM" src="https://user-images.githubusercontent.com/3918217/97440314-51c56800-194d-11eb-8cd9-2fe849ce2535.png">
+
+
+
+<img width="745" alt="Screenshot 2020-10-28 at 6 42 53 PM" src="https://user-images.githubusercontent.com/3918217/97440398-69045580-194d-11eb-8be8-dafaa8fa59ac.png">
+
+
+
+<img width="745" alt="Screenshot 2020-10-28 at 6 43 18 PM" src="https://user-images.githubusercontent.com/3918217/97440435-78839e80-194d-11eb-902e-1692a2ebff6e.png">
+
+
+
+<img width="745" alt="Screenshot 2020-10-28 at 6 43 48 PM" src="https://user-images.githubusercontent.com/3918217/97440495-889b7e00-194d-11eb-9657-5db10f6ee572.png">
+
+
+
+<img width="745" alt="Screenshot 2020-10-28 at 6 45 39 PM" src="https://user-images.githubusercontent.com/3918217/97440714-d2846400-194d-11eb-8ef8-ed02f3a7609c.png">
+
 
 
 # 🚀 Technologies
