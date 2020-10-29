@@ -33,12 +33,10 @@ class TodoApp extends React.Component {
   };
   onSelectedDelete = itemIndex => {
     let deleteListValues = this.state.deleteList;
-    let todo = this.state.todoItems;
+    let global = this;
     deleteListValues.forEach(function(value, index) {
-      todo.splice(value, 1);
+      global.removeItem(value);
     });
-
-    this.setState({ todoItems: todo });
   };
   markTodoDone = itemIndex => {
     var todo = this.state.todoItems[itemIndex];
@@ -68,10 +66,16 @@ class TodoApp extends React.Component {
     this.setState({ todoItems: val });
   };
 
+  handleChangeStatus = status => {
+    this.setState({
+      status
+    });
+  };
+
   render() {
     return (
       <div id="main">
-        <TodoHeader />
+        <TodoHeader handleChangeStatus={this.handleChangeStatus} />
         <TodoList
           items={this.props.todoItems}
           deleteList={this.state.deleteList}

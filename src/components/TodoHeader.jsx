@@ -4,7 +4,27 @@ class TodoHeader extends React.Component {
   render() {
     return (
       <div>
-        <h1>Todo List</h1>
+        <h1 style={{ color: "#999" }}>Todo List</h1>
+        {/* <ul className="uk-subnav uk-subnav-pill">
+          <li
+            onClick={() => handleChangeStatus("all")}
+            className={status === "all" ? "uk-active" : ""}
+          >
+            <a>All</a>
+          </li>
+          <li
+            onClick={() => handleChangeStatus("active")}
+            className={status === "active" ? "uk-active" : ""}
+          >
+            <a>Active</a>
+          </li>
+          <li
+            onClick={() => handleChangeStatus("completed")}
+            className={status === "completed" ? "uk-active" : ""}
+          >
+            <a>Completed</a>
+          </li>
+        </ul> */}
         {/* <p> Following features supported by our TODO List</p>
         <p>
           • Each To-Do in the list consist of To-Do Label and To-Do Priority.{" "}
